@@ -3,7 +3,6 @@ public abstract class UtilityProvider extends Cell {
     private int capaciy = 100;
     private int remaining;
 
-
     public UtilityProvider(int row, int column, String symbol) {
         super(row, column, symbol);
     }
@@ -30,6 +29,4 @@ public abstract class UtilityProvider extends Cell {
     }
 
     public abstract String getUtilityType(); //"Electricity", "Water" and "Internet" (Ferhat).
-
 }
-

@@ -3,7 +3,7 @@ public abstract class Cell {
     private int column;
     private char symbol; //I specifically choose the "char" because we are only using "one" character for symbols (Ferhat).
 
-    public Cell(int row, int column, String symbol) {
+    public Cell(int row, int column, char symbol) {
         this.row = row;
         this.column = column;
     }
