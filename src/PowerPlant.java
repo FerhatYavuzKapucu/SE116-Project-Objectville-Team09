@@ -11,5 +11,7 @@ public class PowerPlant extends UtilityProvider{
     public String getUtilityType() {
         return "Electricity";
     }
-
+    public String getSymbol() {
+        return "P";
+    }
 }

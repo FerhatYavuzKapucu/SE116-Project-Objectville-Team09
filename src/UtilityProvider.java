@@ -3,7 +3,7 @@ public abstract class UtilityProvider extends Cell {
     private int capaciy = 100;
     private int remaining;
 
-    public UtilityProvider(int row, int column, String symbol) {
+    public UtilityProvider(int row, int column, char symbol) {
         super(row, column, symbol);
     }
 
