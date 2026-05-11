@@ -15,7 +15,7 @@ public abstract class Cell {
         return column;
     }
 
-    public abstract String getType(); //I have implemented this because we need an abstract class which returns the type of building such as Housing or Road (Ferhat).
+    public abstract String getSymbol(); //I have implemented this because we need an abstract class which returns the type of building such as Housing or Road (Ferhat).
 
     @Override
     public String toString() {
