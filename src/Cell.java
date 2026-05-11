@@ -20,5 +20,5 @@ public abstract class Cell {
     @Override
     public String toString() {
         return String.valueOf(symbol);
-    }
+    } // We are converting char to String so that we can have outputs such as: "H", "E" or "R" (Ferhat).
 }
