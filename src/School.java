@@ -7,12 +7,7 @@ public class School extends ServiceProvider{
     public String getServiceType(){
         return "Education";
     }
-
-    @Override
-    public String getType(){
-        return "School";
-    }
-
+    
     @Override
     public String getSymbol(){
         return "S";

@@ -9,11 +9,6 @@ public class PoliceStation extends ServiceProvider{
     }
 
     @Override
-    public String getType(){
-        return "Police Station";
-    }
-
-    @Override
     public String getSymbol(){
         return "F";
     }

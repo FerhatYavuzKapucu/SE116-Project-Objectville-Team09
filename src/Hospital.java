@@ -9,11 +9,6 @@ public class Hospital extends ServiceProvider{
     }
 
     @Override
-    public String getType(){
-        return "Hospital";
-    }
-
-    @Override
     public String getSymbol(){
         return "D";
     }
