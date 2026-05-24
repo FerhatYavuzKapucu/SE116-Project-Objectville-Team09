@@ -4,4 +4,11 @@ public class WaterPump extends UtilityProvider{
         super(row, column, symbol);
     }
 
+    public String getUtilityType() {
+        return "Water";
+    }
+
+    public String getSymbol() {
+        return "W";
+    }
 }

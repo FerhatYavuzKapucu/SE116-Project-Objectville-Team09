@@ -4,10 +4,6 @@ public class PowerPlant extends UtilityProvider{
         super(row, column, symbol);
     }
 
-
-    public String getType() {
-        return "Power Plant";
-    }
     public String getUtilityType() {
         return "Electricity";
     }
