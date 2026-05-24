@@ -14,10 +14,28 @@ public class GameGrid {
         this.grid = grid;
         this.rows = rows;
         this.columns = columns;
+
+        fillLists();
+    }
+
+    // I created this method to fill list by checking all cells. (Gizem)
+    private void fillLists() {
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < columns; j++) {
+                if(grid[i][j] instanceof Zone) {
+                    zones.add((Zone) grid[i][j]);
+                }
+                if(grid[i][j] instanceof UtilityProvider) {
+                    utilityProviders.add((UtilityProvider) grid[i][j]);
+                }
+                if(grid[i][j] instanceof ServiceProvider) {
+                    serviceProviders.add((ServiceProvider) grid[i][j]);
+                }
+            }
+        }
     }
 
     public Cell getCell(int row, int column) {
-
         return grid[row][column];
     }
 
