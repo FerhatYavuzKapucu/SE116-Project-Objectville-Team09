@@ -1,4 +1,4 @@
-public abstract class Zone {
+public abstract class Zone extends Cell{
     private int level;
     private int currentDemand;
     private int  output;
