@@ -133,7 +133,7 @@ public abstract class Zone extends Cell{
     //Override yapilacak methodlar.
     abstract public void updateLevel();
     abstract public void calculateOutput();
-    abstract public char getSymbol();
+    abstract public String getSymbol();
 
 
     // Sub classlarda ayni olan talep hesaplama metodu.

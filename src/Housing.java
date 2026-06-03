@@ -40,5 +40,5 @@ public class Housing extends Zone {
     }
 
     @Override
-    public char getSymbol(){return 'H' ; }
+    public String getSymbol(){return "H" ; }
 }

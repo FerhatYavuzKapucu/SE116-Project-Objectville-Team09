@@ -1,7 +1,7 @@
 public class Commercial extends  Zone{
 
-    public Commercial(){
-        super();
+    public Commercial(int row, int column, char symbol, int level){
+        super(row, column, symbol, level);
     }
 
     @Override
@@ -42,5 +42,5 @@ public class Commercial extends  Zone{
     }
 
     @Override
-    public char getSymbol() {return 'C';}
+    public String getSymbol() {return "C";}
 }

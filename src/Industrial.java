@@ -1,6 +1,6 @@
 public class Industrial extends Zone {
-    public Industrial(){
-        super();
+    public Industrial(int row, int column, char symbol, int level){
+        super(row, column, symbol, level);
     }
 
     @Override
@@ -36,5 +36,5 @@ public class Industrial extends Zone {
     }
 
     @Override
-    public char getSymbol(){return  'I';}
+    public String getSymbol(){return  "I";}
 }
