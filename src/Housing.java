@@ -1,6 +1,6 @@
 public class Housing extends Zone {
-    public Housing() {
-        super();
+    public Housing(int row, int column, char symbol, int level) {
+        super(row, column, symbol, level);
     }
 
     @Override

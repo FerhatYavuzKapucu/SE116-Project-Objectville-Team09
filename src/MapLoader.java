@@ -40,7 +40,7 @@ public class MapLoader {
 
     private static Cell createCell(char c, int row, int col) {
         switch (c) {
-            case 'H': return new Housing();     // Bu sınıfların constructure'ları no-arg
+            case 'H': return new Housing(row,col,'H',0);     // Bu sınıfların constructure'ları no-arg
             case 'I': return new Industrial();
             case 'C': return new Commercial();
             case 'P': return new PowerPlant(row, col, 'P');
