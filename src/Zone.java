@@ -13,7 +13,11 @@ public abstract class Zone extends Cell{
     private int receivedPopulation;
 
 // Constructor method (Oyuna baslarken binlarda ve haritada bir sey olmadigi varsayilarak 0 girildi)
-    public Zone(){
+
+
+    public Zone(int row, int column, char symbol, int level) {
+        super(row, column, symbol);
+
         this.level = 0;
         this.receivedElectricity = 0;
         this.receivedWater = 0;
