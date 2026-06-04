@@ -12,12 +12,10 @@ public abstract class Zone extends Cell{
     private int receivedLifestyle;
     private int receivedPopulation;
 
-// Constructor method (Oyuna baslarken binlarda ve haritada bir sey olmadigi varsayilarak 0 girildi)
-
 
     public Zone(int row, int column, char symbol, int level) {
         super(row, column, symbol);
-
+    //When the game starts everything should be 0 or false (Yigit)
         this.level = 0;
         this.receivedElectricity = 0;
         this.receivedWater = 0;
@@ -32,7 +30,7 @@ public abstract class Zone extends Cell{
         this.receivedPopulation = 0;
     }
 
-    // Getter ve setterlar.
+    // Getters and setters for updating. (Yigit)
     public int getCurrentDemand() {
         return currentDemand;
     }
@@ -130,14 +128,14 @@ public abstract class Zone extends Cell{
         this.receivedPopulation = receivedPopulation;
     }
 
-    //Override yapilacak methodlar.
+    //Abstract methods for overriding (Yigit)
     abstract public void updateLevel();
     abstract public void calculateOutput();
     abstract public String getSymbol();
 
 
-    // Sub classlarda ayni olan talep hesaplama metodu.
-    //Bir sonraki turum demandi output kadar olmak zorunda ve en az 1 olabilir. Bu yuzden karsilastirip fazlayi alir.
+    // Calculating demand which same for every subclass. (Yigit)
+    //Deciding the demand depending on output.When there is not a output demand will be 1. (Yigit)
     public void calculateDemand(){
         this.currentDemand = Math.max(1,this.output);
     }

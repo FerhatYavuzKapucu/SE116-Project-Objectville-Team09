@@ -5,6 +5,7 @@ public class Industrial extends Zone {
 
     @Override
     public void updateLevel() {
+        //Deciding the level with logic operations(and,or) (Yigit)
         if(getReceivedPopulation() == 0 || getReceivedElectricity() == 0 || getReceivedWater() == 0 ){
             setLevel(0);
         } else if (getReceivedWater() != 0 && getReceivedElectricity() != 0
@@ -22,7 +23,9 @@ public class Industrial extends Zone {
 
     @Override
     public void calculateOutput(){
+        //Finding the minimum m with the variables for calculating output (Yigit)
         int m = Math.min(getReceivedPopulation(),(Math.min(getReceivedWater(),getReceivedElectricity())));
+        // Calculating the output depending on m and level (Yigit)
         if( getLevel() == 0){
             setOutput(0);
         } else if (getLevel() == 1) {

@@ -5,6 +5,7 @@ public class Housing extends Zone {
 
     @Override
     public void updateLevel(){
+        //Deciding the level with logic operations(and,or) (Yigit)
         if(getReceivedWater()==0 || getReceivedElectricity() == 0 || getReceivedInternet() == 0){
             setLevel(0);
         } else if (getLevel()==0 && getReceivedInternet() !=0 && getReceivedElectricity() != 0 && getReceivedWater() != 0) {
@@ -25,8 +26,9 @@ public class Housing extends Zone {
 
     @Override
     public void calculateOutput(){
-        //Gerekli degiskenlerden en ufak ve uretimi sinirlayandirani buluyorum.
+        //Finding the minimum m with the variables for calculating output (Yigit)
         int m = Math.min(getReceivedElectricity(),Math.min(getReceivedWater(),getReceivedInternet()));
+       // Calculating the output depending on m and level (Yigit)
         if(getLevel() == 0){
             setOutput(0);
         } else if ( getLevel() == 1) {

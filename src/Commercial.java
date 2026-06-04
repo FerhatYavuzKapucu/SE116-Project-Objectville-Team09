@@ -6,6 +6,7 @@ public class Commercial extends  Zone{
 
     @Override
     public void updateLevel(){
+        //Deciding the level with logic operations(and,or) (Yigit)
         if(getReceivedWater() == 0 && getReceivedInternet() == 0 && getReceivedElectricity() == 0
         && getReceivedGoods() ==0 && getReceivedPopulation() == 0){
             setLevel(0);
@@ -26,9 +27,11 @@ public class Commercial extends  Zone{
 
     @Override
     public void calculateOutput(){
+        //Finding the minimum m with the variables for calculating output (Yigit)
         int a = Math.min(getReceivedWater(),(Math.min(getReceivedElectricity(),getReceivedInternet())));
         int b = Math.min(getReceivedGoods(),getReceivedPopulation());
         int m = Math.min(a,b);
+        // Calculating the output depending on m and level (Yigit)
         if (getLevel() == 0){
             setOutput(0);
         } else if (getLevel() == 1) {
